@@ -1,0 +1,46 @@
+/* components/customScollView/customScollView.wxss */
+
+.page{
+  
+}
+
+.header {
+  /* width: 750rpx; */
+  position: relative;
+}
+
+.refresh {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: white;
+}
+
+.refresh-image {
+  height: 60px;
+  width: 80px;
+  margin: auto;
+}
+
+.content {
+  position: relative;
+  /* width: 750rpx; */
+  align-items: stretch;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-load {
+  line-height: 44rpx;
+  margin: auto;
+  padding: 20rpx;
+}

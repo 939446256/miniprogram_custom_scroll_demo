@@ -1,0 +1,20 @@
+<!--components/customScollView/customScollView.wxml-->
+<!-- 加载动画 -->
+<scroll-view bindscroll="listenScroll" bindscrolltolower="pullToBottom" scroll-y scroll-with-animation="{{isReady}}"
+  scroll-top="{{scrollTop}}" style="height:{{height}};overflow: hidden;">
+
+  <view catchtouchend="touchEnd" id="ScrollArea" class="page flex-col"
+    style="min-height: {{screenHeight + refreshHeaderHight}}px">
+    <!-- 头部高度 -->
+    <view class="header flex-row" style="height:{{refreshHeaderHight}}px;">
+      <view class="refresh flex-row" style="top:{{imageTop}}px;">
+        <image lazy-load class="refresh-image" src="./down_loading.gif" style="" />
+      </view>
+    </view>
+    <!-- 内容 -->
+    <view class="content flex-col" catchtouchend="touchEnd">
+      <slot></slot>
+    </view>
+  </view>
+
+</scroll-view>

@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<!-- 测试工具 -->
+
+<!-- 自定义组件 -->
+
+<!-- 原生组件:支持最低版本 2.10.1 -->
+<view for="" style="color:red">原生组件:支持最低版本 2.10.1</view>
+<view style="border: 1px solid #ccc;">
+  <scroll-view 
+  style="height:400rpx;" 
+  scroll-y
+  refresher-enabled
+  refresher-triggered="{{isRefresher}}" 
+  bindrefresherrefresh="onRefresh"
+  bindscrolltolower="onLoadMore"
+  class="flex-col">
+  <view wx:for="{{12}}" wx:key="index">原生组件{{index}}</view>
+</scroll-view>
+</view>
+
+
+<!-- 封装组件:支持最低版本 1.0.0 -->
+<view for="" style="margin-top:30rpx;color:red">封装组件:支持最低版本 1.0.0</view>
+<view style="border: 1px solid #ccc;">
+  <customScollView
+  height="400rpx" 
+  triggered="{{isRefresher}}"
+  bindRefresh="onRefresh"
+  bindLoadMore="onLoadMore">
+  <view wx:for="{{12}}" wx:key="index">封装组件{{index}}</view>
+</customScollView>
+</view>
+
+<view style="margin:20rpx;">
+  <checkbox-group bindchange="checkboxChange">
+    <checkbox value="triggered" checked="{{isRefresher}}">triggered下拉刷新状态</checkbox>
+  </checkbox-group>
+</view>
+
+
+
+
